@@ -36,6 +36,12 @@ Neumorphism, often referred to as "soft UI," is a design trend that combines ele
 Unit Testing I wrote unit tests to ensure critical components' functionality, including note creation, deletion, and search. These tests ensure the app's reliability and verify that essential features are working as expected.
 
 
+
+## Demo Video
+
+
+
+
 ![WhatsApp Image 2023-08-21 at 12 24 34 AM](https://github.com/KOKADWARAkshay/Kikunote/assets/70112790/d529c89f-7930-46be-801c-ab74eebf5b46)
 
 
@@ -50,3 +56,4 @@ Unit Testing I wrote unit tests to ensure critical components' functionality, in
 
 
 ![WhatsApp Image 2023-08-21 at 12 24 34 AM](https://github.com/KOKADWARAkshay/Kikunote/assets/70112790/a6d73744-519b-462b-8a99-d4303dd17a62)
+
