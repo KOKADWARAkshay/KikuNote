@@ -24,7 +24,7 @@ android {
 //for local testing
     signingConfigs {
         release {
-            storeFile file('/Users/rizki/Documents/Keystore/YOUR-KEYSTORE')
+            storeFile file('/Users/aksha/Documents/Keystore/YOUR-KEYSTORE')
             storePassword 'YOUR-STORE-PASSWORD'
             keyAlias = 'YOUR-KEY-ALIAS'
             keyPassword 'YOUR-KEY-PASSWORD'

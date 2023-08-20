@@ -74,12 +74,50 @@
         app:layout_constraintTop_toBottomOf="@+id/ncv_label"
         app:neumorph_shapeType="pressed">
 
+
+
+        <LinearLayout
+            android:id="@+id/llType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bold"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:gravity="start"
+                android:src="@drawable/baseline_format_bold_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/italic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:src="@drawable/baseline_format_italic_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bullet"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:gravity="end"
+                android:src="@drawable/baseline_format_list_bulleted_24" />
+
+        </LinearLayout>
         <EditText
             android:id="@+id/edit_text_body"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="76dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:background="@null"
@@ -89,7 +127,9 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llType"/>
 
     </soup.neumorphism.NeumorphCardView>
 

@@ -1,7 +1,11 @@
 package com.kikunote.activity
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -33,6 +37,10 @@ class EditActivity : AppCompatActivity(), View.OnClickListener {
         initView()
         initViewModel()
         initListener()
+
+        binding.bold.setOnClickListener(this)
+        binding.italic.setOnClickListener(this)
+        binding.bullet.setOnClickListener(this)
 
     }
 
@@ -160,9 +168,37 @@ class EditActivity : AppCompatActivity(), View.OnClickListener {
                 }
 
             }
+
             R.id.button_delete -> {
                 showDialog()
             }
+
+            R.id.bold -> {
+                applyFormattingToSelectedText(Typeface.BOLD)
+            }
+            R.id.italic-> {
+                applyFormattingToSelectedText(Typeface.ITALIC)
+            }
+            R.id.bullet -> {
+                insertBulletPoint()
+            }
         }
+    }
+    private fun applyFormattingToSelectedText(style: Int) {
+        val selectedTextRange = binding.editTextBody.selectionStart to binding.editTextBody.selectionEnd
+        val spannableString = SpannableString(binding.editTextBody.text)
+        spannableString.setSpan(StyleSpan(style), selectedTextRange.first, selectedTextRange.second, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
+
+        val editableText = binding.editTextBody.editableText
+        editableText.replace(selectedTextRange.first, selectedTextRange.second, spannableString)
+    }
+
+
+    private fun insertBulletPoint() {
+        val cursorPosition = binding.editTextBody.selectionStart
+        val currentLineStart = binding.editTextBody.text.lastIndexOf('\n', cursorPosition - 1) + 1
+        val bulletPoint = "\u2022 " // Unicode bullet point character
+        val indentedText = bulletPoint + binding.editTextBody.text.subSequence(currentLineStart, cursorPosition)
+        binding.editTextBody.text.replace(currentLineStart, cursorPosition, indentedText)
     }
 }

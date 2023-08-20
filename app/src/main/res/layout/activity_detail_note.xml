@@ -43,7 +43,7 @@
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/tv_title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title"
-                tools:text="Jul 01, 1997" />
+                tools:text="Jul 01, 2023" />
 
             <TextView
                 android:id="@+id/tv_body"
@@ -55,7 +55,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/tv_title"
                 app:layout_constraintStart_toStartOf="@+id/tv_title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_date"
-                tools:text="Hi my name is rizki and i love kotlin!" />
+                tools:text="Hi my name is Akshay and i love kotlin!" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
